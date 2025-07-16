@@ -1,8 +1,11 @@
 package com.modules.bcncgroup;
 
+import io.swagger.v3.oas.models.OpenAPI;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import io.swagger.v3.oas.models.info.Info;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.simple.JdbcClient;
 
@@ -47,14 +50,21 @@ public class BcncGroupApplication implements CommandLineRunner {
             
             """;
 
-
-
     @Override
     public void run(String... args) throws Exception {
         jdbcClient.sql(INSERT_BRAND).update();
         jdbcClient.sql(INSERT_PRICE_LIST).update();
         jdbcClient.sql(INSERT_PRODUCT).update();
         jdbcClient.sql(INSERT_PRICE).update();
+    }
+
+    @Bean
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .info(new Info()
+                        .title("Price API")
+                        .version("1.0")
+                        .description("API to search prices according product, brand and date."));
     }
 
     public static void main(String[] args) {
