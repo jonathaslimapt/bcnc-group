@@ -2,7 +2,7 @@ FROM eclipse-temurin:21-jre-alpine
 
 ENV APP_NAME bcnc
 
-COPY ./target/bcnc.jar /app/bcnc.jar
+COPY ./build/bcnc.jar /app/bcnc.jar
 
 WORKDIR /app
 

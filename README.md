@@ -34,11 +34,17 @@ To access the H2 console -> http://localhost:8080/h2-console/
 ### Steps
 
 ```bash
-git clone git@github.com:jonathaslimapt/bcnc-group.git or https://github.com/jonathaslimapt/bcnc-group.git
-cd bcnc-group
-./mvnw spring-boot:run
+- git clone git@github.com:jonathaslimapt/bcnc-group.git or
+- https://github.com/jonathaslimapt/bcnc-group.git
 
-or
+After, go to the root folder at: 
+- cd bcnc-group
+- execute ./mvnw clean package
+
+To execute direclty you can use 
+- /mvnw spring-boot:run
+
+or Dockerized
 
 docker build -t bcnc .
 docker run -p 8080:8080 bcnc
