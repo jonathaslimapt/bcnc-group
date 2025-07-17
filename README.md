@@ -40,12 +40,12 @@ To access the H2 console -> http://localhost:8080/h2-console/
 
 After, go to the root folder at: 
 - cd bcnc-group
-- execute ./mvnw clean package
 
 To execute direclty you can use 
+- /mvn clean package
 - /mvnw spring-boot:run
 
-or Dockerized
+or Dockerized (Recommended)
 
 docker build -t bcnc .
 docker run -p 8080:8080 bcnc

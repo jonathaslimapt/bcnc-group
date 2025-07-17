@@ -9,6 +9,9 @@ import com.modules.bcncgroup.ports.outbound.RetrievePriceOutboundPort;
 
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 @Service
 public class RetrievePriceOutboundAdapter implements RetrievePriceOutboundPort {
@@ -22,8 +25,11 @@ public class RetrievePriceOutboundAdapter implements RetrievePriceOutboundPort {
     @Override
     public PriceResponse retrievePrice(PriceRequest priceRequest) {
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime date = LocalDateTime.parse(priceRequest.date(), formatter);
+
             Price price = priceRepository
-                    .findPriceByParams(priceRequest.productId(), priceRequest.brandId(), priceRequest.now())
+                    .findPriceByParams(priceRequest.productId(), priceRequest.brandId(), date)
                     .orElseThrow(() -> new ItemNotFoundException("Price not found"));
 
             return new PriceResponse(

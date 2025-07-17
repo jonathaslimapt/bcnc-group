@@ -47,13 +47,13 @@ public class PriceControllerTest {
 
     @ParameterizedTest
     @MethodSource("priceRequestProvider")
-    void testGetPrice(LocalDateTime now, Integer productId, Integer brandId) throws Exception {
+    void testGetPrice(String now, Integer productId, Integer brandId) throws Exception {
 
 
         PriceRequest priceRequest = new PriceRequest(now, productId, brandId);
 
         mockMvc.perform(get("/prices")
-                        .param("now", priceRequest.now().toString())
+                        .param("date", priceRequest.date().toString())
                         .param("productId", priceRequest.productId().toString())
                         .param("brandId", priceRequest.brandId().toString()))
                 .andExpect(status().isOk())
@@ -63,24 +63,24 @@ public class PriceControllerTest {
     static Stream<Arguments> priceRequestProvider() {
         return Stream.of(
                 Arguments.of(
-                        LocalDateTime.of(2020, 6, 14, 10, 0),
+                        "2020-06-14 14:00:00",
                         35455, 1
                 ),
                 Arguments.of(
-                        LocalDateTime.of(2020, 6, 14, 16, 0),
+                        "2020-06-14 16:00:00",
                         35455, 1
                 ),
                 Arguments.of(
-                        LocalDateTime.of(2020, 6, 14, 21, 0),
+               "2020-06-14 21:00:00",
                         35455, 1
                 )
                 ,
                 Arguments.of(
-                        LocalDateTime.of(2020, 6, 15, 10, 0),
+                        "2020-06-15 15:00:00",
                         35455, 1
                 ),
                 Arguments.of(
-                        LocalDateTime.of(2020, 6, 16, 21, 0),
+                       "2020-06-16 21:00:00",
                         35455, 1
                 )
 
