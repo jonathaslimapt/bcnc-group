@@ -28,6 +28,7 @@ This project is an simple Hexagonal project using Spring Boot 3.4
 
 ### H2 Connection
 To access the H2 console -> http://localhost:8080/h2-console/
+- JDBC URL : jdbc:h2:mem:bcnc
 - user = sa
 - no password is necessary
 
