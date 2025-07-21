@@ -1,4 +1,4 @@
-package com.modules.bcncgroup.core.repository.entities;
+package com.modules.bcncgroup.adapters.outbound.repository.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

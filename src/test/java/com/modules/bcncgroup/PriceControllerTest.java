@@ -1,24 +1,20 @@
 package com.modules.bcncgroup;
 
 import com.modules.bcncgroup.adapters.outbound.RetrievePriceOutboundAdapter;
-import com.modules.bcncgroup.core.repository.PriceRepository;
-import com.modules.bcncgroup.core.ui.request.PriceRequest;
-import com.modules.bcncgroup.core.ui.response.PriceResponse;
+import com.modules.bcncgroup.adapters.outbound.repository.PriceRepository;
+import com.modules.bcncgroup.adapters.inbound.ui.ui.request.PriceRequest;
 import com.modules.bcncgroup.core.usecase.RetrievePriceUseCase;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.test.web.servlet.MockMvc;
 
-import java.time.LocalDateTime;
 import java.util.stream.Stream;
 
 import static org.hamcrest.Matchers.is;

@@ -1,4 +1,4 @@
-package com.modules.bcncgroup.core.exception;
+package com.modules.bcncgroup.core.domain.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;

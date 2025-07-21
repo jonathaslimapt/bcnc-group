@@ -1,18 +1,13 @@
 package com.modules.bcncgroup.adapters.inbound.ui;
 
-import com.modules.bcncgroup.core.ui.request.PriceRequest;
-import com.modules.bcncgroup.core.ui.response.PriceResponse;
+import com.modules.bcncgroup.adapters.inbound.ui.ui.request.PriceRequest;
+import com.modules.bcncgroup.adapters.inbound.ui.ui.response.PriceResponse;
 import com.modules.bcncgroup.ports.inbound.PriceInboundInterfacePort;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import jakarta.validation.Valid;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import java.time.LocalDateTime;
 
 @RestController
 @RequestMapping("/prices")

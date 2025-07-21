@@ -1,4 +1,4 @@
-package com.modules.bcncgroup.core.ui.request;
+package com.modules.bcncgroup.adapters.inbound.ui.ui.request;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Min;

@@ -1,10 +1,10 @@
 package com.modules.bcncgroup.adapters.outbound;
 
-import com.modules.bcncgroup.core.exception.ItemNotFoundException;
-import com.modules.bcncgroup.core.repository.PriceRepository;
-import com.modules.bcncgroup.core.repository.entities.Price;
-import com.modules.bcncgroup.core.ui.request.PriceRequest;
-import com.modules.bcncgroup.core.ui.response.PriceResponse;
+import com.modules.bcncgroup.core.domain.exception.ItemNotFoundException;
+import com.modules.bcncgroup.adapters.outbound.repository.PriceRepository;
+import com.modules.bcncgroup.adapters.outbound.repository.entities.Price;
+import com.modules.bcncgroup.adapters.inbound.ui.ui.request.PriceRequest;
+import com.modules.bcncgroup.adapters.inbound.ui.ui.response.PriceResponse;
 import com.modules.bcncgroup.ports.outbound.RetrievePriceOutboundPort;
 
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.modules.bcncgroup.core.repository;
+package com.modules.bcncgroup.adapters.outbound.repository;
 
-import com.modules.bcncgroup.core.repository.entities.Price;
+import com.modules.bcncgroup.adapters.outbound.repository.entities.Price;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

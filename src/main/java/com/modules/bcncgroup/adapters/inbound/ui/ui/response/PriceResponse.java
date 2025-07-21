@@ -1,4 +1,4 @@
-package com.modules.bcncgroup.core.ui.response;
+package com.modules.bcncgroup.adapters.inbound.ui.ui.response;
 
 import java.time.LocalDateTime;
 

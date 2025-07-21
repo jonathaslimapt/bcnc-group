@@ -1,4 +1,4 @@
-package com.modules.bcncgroup.core.exception;
+package com.modules.bcncgroup.core.domain.exception;
 
 public class ItemNotFoundException extends RuntimeException {
 
