@@ -1,4 +1,4 @@
-package com.modules.bcncgroup.adapters.outbound.repository.entities;
+package com.modules.bcncgroup.core.domain.entities;
 
 import jakarta.persistence.*;
 

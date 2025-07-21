@@ -5,6 +5,9 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 public record PriceRequest(
         @NotNull(message = "date is required")
@@ -25,4 +28,9 @@ public record PriceRequest(
         @Schema(description = "ID of the brand", example = "1")
         Integer brandId
 ) {
+
+        public static LocalDateTime parseDateTime(String input) {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                return LocalDateTime.parse(input, formatter);
+        }
 }
