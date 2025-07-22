@@ -1,4 +1,4 @@
-# 🧠 BCNC Group - Spring Boot REST API
+# 🧠 Hexagonal Spring Boot REST API
 
 A simple **Hexagonal Architecture** project using **Spring Boot 3.4.7**, created as an example for a pricing service.
 
