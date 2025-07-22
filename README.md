@@ -88,8 +88,8 @@ H2 Console: [http://localhost:8080/h2-console/](http://localhost:8080/h2-console
 ## 📥 Clone the Repository
 
 ```bash
-git clone https://github.com/jonathaslimapt/bcnc-group.git
-cd bcnc-group
+git clone https://github.com/jonathaslimapt/hexagonal.git
+cd hexagonal
 ```
 
 ---

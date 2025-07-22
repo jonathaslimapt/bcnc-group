@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.modules</groupId>
-    <artifactId>bcnc-group</artifactId>
+    <artifactId>hexagonal</artifactId>
     <version>0.0.1</version>
-    <name>bcnc-group</name>
-    <description>bcnc-group</description>
+    <name>hexagonal</name>
+    <description>hexagonal</description>
     <url/>
 
     <properties>
